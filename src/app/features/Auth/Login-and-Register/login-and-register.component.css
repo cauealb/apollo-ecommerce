@@ -1,13 +1,31 @@
 .login {
-  background-color: yellow;
-
-  max-width: 400px;
+  width: 25em;
   padding: 1em;
   display: flex;
   flex-direction: column;
+  gap: 1em;
+  background-color: rgba(248, 249, 250, 1);
 }
 
-.login button {
-    padding: 0.50em 2em;
+.login h1 {
+    text-align: center;
+}
+
+.login div:last-child {
+    display: grid;
+    grid-auto-flow: column;
+}
+
+.login div:last-child button {
+    padding: 0.50em 3em;
     align-self: flex-end;
+}
+
+.login div:last-child a {
+    color: black;
+    text-decoration: none;
+}
+
+.login div:last-child a:hover {
+    text-decoration: underline;
 }
