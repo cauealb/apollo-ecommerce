@@ -1,10 +1,11 @@
-<form action="post" class="login shadow">
+<form action="post" [formGroup]="formLogin" class="login shadow">
   <h1>Apollo</h1>
   <div>
     <label for="inputPassword5" class="form-label">User</label>
     <input
       type="text"
       class="form-control"
+      formControlName="login"
       placeholder="pitica123"
       aria-describedby="passwordHelpBlock"
     />
@@ -14,12 +15,13 @@
     <input
       type="password"
       class="form-control"
+      formControlName="password"
       placeholder="*********"
       aria-describedby="passwordHelpBlock"
     />
   </div>
   <div>
-        <a href="#">forgot my password</a>
-      <button type="button" class="btn btn-outline-dark">Enter</button>
+    <a href="#">forgot my password</a>
+    <button type="button" class="btn btn-outline-dark">Enter</button>
   </div>
 </form>
