@@ -36,9 +36,11 @@ export class LoginAndRegisterComponent implements OnInit {
 
     if (
       this.formLogin.get('login')?.value !== 'admin' &&
-      this.formLogin.get('login')?.value !== 'pitica' &&
-      this.formLogin.get('password')?.value !== '123'
+      this.formLogin.get('login')?.value !== 'pitica'
     ) {
+      this.toastr.error('Acesso negado', 'Erro');
+      return;
+    } else if (this.formLogin.get('password')?.value !== '123') {
       this.toastr.error('Acesso negado', 'Erro');
       return;
     }
