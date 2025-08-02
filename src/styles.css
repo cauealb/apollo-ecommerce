@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+  --color-principal: ##212529;
+  --font: "Roboto", sans-serif;
+}
+
+* {
+  font-family: var(--font);
+  color: var(--color-principal);
+}
