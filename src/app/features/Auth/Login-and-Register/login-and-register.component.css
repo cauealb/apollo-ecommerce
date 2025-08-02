@@ -33,3 +33,17 @@ label .login div:last-child button {
 .login div:last-child a:hover {
   text-decoration: underline;
 }
+
+.err p {
+  color: red;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.8em;
+  width: fit-content;
+  transition: color 0.2s linear;
+  cursor: default;
+}
+
+.err p:hover {
+  color: var(--font);
+}

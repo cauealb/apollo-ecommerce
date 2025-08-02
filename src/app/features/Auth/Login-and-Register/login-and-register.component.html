@@ -1,4 +1,4 @@
-<form action="post" [formGroup]="formLogin" class="login shadow">
+<form action="post" [formGroup]="this.formLogin" class="login shadow">
   <h1>Apollo</h1>
   <div>
     <label for="inputPassword5" class="form-label">User</label>
@@ -6,9 +6,14 @@
       type="text"
       class="form-control"
       formControlName="login"
+      required
+      name="password"
       placeholder="pitica123"
       aria-describedby="passwordHelpBlock"
     />
+    <div class="err" *ngIf="formLogin.get('login')?.invalid">
+      <p *ngIf="formLogin.get('login')!.errors?.['required']">O usuário é obrigatório.</p>
+    </div>
   </div>
   <div>
     <label for="inputPassword5" class="form-label">Password</label>
@@ -16,12 +21,17 @@
       type="password"
       class="form-control"
       formControlName="password"
+      required
+      name="password"
       placeholder="*********"
       aria-describedby="passwordHelpBlock"
     />
+    <div *ngIf="formLogin.get('password')?.invalid" class="err">
+      <p *ngIf="this.formLogin.get('password')!.errors?.['required']">a senha é obrigatória</p>
+    </div>
   </div>
   <div>
     <a href="#">forgot my password</a>
-    <button type="button" class="btn btn-outline-dark">Enter</button>
+    <button type="button" class="btn btn-outline-dark" (click)="enterLogin()">Enter</button>
   </div>
 </form>
