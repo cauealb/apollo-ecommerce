@@ -10,5 +10,5 @@ import { LoginAndRegisterComponent } from './features/Auth/Login-and-Register/lo
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'apollo';
+  
 }
