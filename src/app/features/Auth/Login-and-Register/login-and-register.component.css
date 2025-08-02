@@ -1,0 +1,13 @@
+.login {
+  background-color: yellow;
+
+  max-width: 400px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.login button {
+    padding: 0.50em 2em;
+    align-self: flex-end;
+}
