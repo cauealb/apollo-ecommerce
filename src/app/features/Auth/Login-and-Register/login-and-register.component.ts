@@ -7,11 +7,12 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ToastrModule, ToastrService } from 'ngx-toastr';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login-and-register',
   standalone: true,
-  imports: [ReactiveFormsModule, CommonModule, ToastrModule],
+  imports: [ReactiveFormsModule, CommonModule, ToastrModule, RouterLink],
   templateUrl: './login-and-register.component.html',
   styleUrl: './login-and-register.component.css',
 })
