@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { FormGroup, FormControl, ReactiveFormsModule } from '@angular/forms'
+import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angular/forms'
 
 @Component({
   selector: 'app-forgot-password',
@@ -20,13 +20,14 @@ export class ForgotPasswordComponent implements OnInit {
 
   resetGroup() {
     this.formPassword = new FormGroup({
-      user: new FormControl(''),
-      password: new FormControl(''),
-      confirmPassword: new FormControl('')
+      user: new FormControl('', [Validators.required]),
+      password: new FormControl('', [Validators.required]),
+      confirmPassword: new FormControl('', [Validators.required])
     })
   }
 
   saveNewPassword() {
+    if(this.formPassword.invalid) return;
     console.log(this.formPassword.value)
   }
 } 
