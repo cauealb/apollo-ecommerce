@@ -1,0 +1,49 @@
+.login {
+  width: 25em;
+  padding: 2em 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  background-color: rgba(248, 249, 250, 1);
+  color: var(--color-principal);
+  font: var(--font);
+}
+
+.login h1 {
+  text-align: center;
+  text-transform: uppercase;
+  font-family: var(--font);
+}
+
+.login div:last-child {
+  display: grid;
+  grid-auto-flow: column;
+}
+
+label .login div:last-child button {
+  padding: 0.5em 3em;
+  align-self: flex-end;
+}
+
+.login div:last-child a {
+  color: black;
+  text-decoration: none;
+}
+
+.login div:last-child a:hover {
+  text-decoration: underline;
+}
+
+.err p {
+  color: red;
+  margin: 0;
+  font-style: italic;
+  font-size: 0.8em;
+  width: fit-content;
+  transition: color 0.2s linear;
+  cursor: default;
+}
+
+.err p:hover {
+  color: var(--font);
+}

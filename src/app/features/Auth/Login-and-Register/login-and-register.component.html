@@ -1,0 +1,39 @@
+<form action="post" [formGroup]="this.formLogin" #formDir="ngForm" class="login shadow">
+  <h1>Apollo</h1>
+  <div>
+    <label for="inputPassword5" class="form-label">User</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="login"
+      required
+      autocomplete="off"
+      name="password"
+      placeholder="pitica123"
+      aria-describedby="passwordHelpBlock"
+    />
+    <div class="err" *ngIf="formLogin.get('login')?.invalid && formDir.submitted">
+      <p *ngIf="formLogin.get('login')!.errors?.['required']">O usuário é obrigatório.</p>
+    </div>
+  </div>
+  <div>
+    <label for="inputPassword5" class="form-label">Password</label>
+    <input
+      type="password"
+      class="form-control"
+      formControlName="password"
+      required
+      autocomplete="off"
+      name="password"
+      placeholder="*********"
+      aria-describedby="passwordHelpBlock"
+    />
+    <div *ngIf="formLogin.get('password')?.invalid && formDir.submitted" class="err">
+      <p *ngIf="this.formLogin.get('password')!.errors?.['required']">a senha é obrigatória</p>
+    </div>
+  </div>
+  <div>
+    <a routerLink="/forgot-password">forgot my password</a>
+    <button type="submit" class="btn btn-outline-dark" (click)="enterLogin()">Enter</button>
+  </div>
+</form>
